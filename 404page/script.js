@@ -1,36 +1,87 @@
-var $copyContainer = $(".copy-container"),
-    $replayIcon = $('#cb-replay'),
-    $copyWidth = $('.copy-container').find('p').width();
+gsap.set("svg", { visibility: "visible" });
+gsap.to("#headStripe", {
+  y: 0.5,
+  rotation: 1,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut",
+  duration: 1
+});
+gsap.to("#spaceman", {
+  y: 0.5,
+  rotation: 1,
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut",
+  duration: 1
+});
+gsap.to("#craterSmall", {
+  x: -3,
+  yoyo: true,
+  repeat: -1,
+  duration: 1,
+  ease: "sine.inOut"
+});
+gsap.to("#craterBig", {
+  x: 3,
+  yoyo: true,
+  repeat: -1,
+  duration: 1,
+  ease: "sine.inOut"
+});
+gsap.to("#planet", {
+  rotation: -2,
+  yoyo: true,
+  repeat: -1,
+  duration: 1,
+  ease: "sine.inOut",
+  transformOrigin: "50% 50%"
+});
 
-var mySplitText = new SplitText($copyContainer, {type:"words"}),
-    splitTextTimeline = new TimelineMax();
-var handleTL = new TimelineMax();
+gsap.to("#starsBig g", {
+  rotation: "random(-30,30)",
+  transformOrigin: "50% 50%",
+  yoyo: true,
+  repeat: -1,
+  ease: "sine.inOut"
+});
+gsap.fromTo(
+  "#starsSmall g",
+  { scale: 0, transformOrigin: "50% 50%" },
+  { scale: 1, transformOrigin: "50% 50%", yoyo: true, repeat: -1, stagger: 0.1 }
+);
+gsap.to("#circlesSmall circle", {
+  y: -4,
+  yoyo: true,
+  duration: 1,
+  ease: "sine.inOut",
+  repeat: -1
+});
+gsap.to("#circlesBig circle", {
+  y: -2,
+  yoyo: true,
+  duration: 1,
+  ease: "sine.inOut",
+  repeat: -1
+});
 
-// WIP - need to clean up, work on initial state and handle issue with multiple lines on mobile
+gsap.set("#glassShine", { x: -68 });
 
-var tl = new TimelineMax();
+gsap.to("#glassShine", {
+  x: 80,
+  duration: 2,
+  rotation: -30,
+  ease: "expo.inOut",
+  transformOrigin: "50% 50%",
+  repeat: -1,
+  repeatDelay: 8,
+  delay: 2
+});
 
-tl.add(function(){
-  animateCopy();
-  blinkHandle();
-}, 0.2)
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('nav');
 
-function animateCopy() {
-  mySplitText.split({type:"chars, words"}) 
-  splitTextTimeline.staggerFrom(mySplitText.chars, 0.001, {autoAlpha:0, ease:Back.easeInOut.config(1.7), onComplete: function(){
-    animateHandle()
-  }}, 0.05);
-}
-
-function blinkHandle() {
-  handleTL.fromTo('.handle', 0.4, {autoAlpha:0},{autoAlpha:1, repeat:-1, yoyo:true}, 0);
-}
-
-function animateHandle() {
-  handleTL.to('.handle', 0.7, {x:$copyWidth, ease:SteppedEase.config(12)}, 0.05);
-}
-
-$('#cb-replay').on('click', function(){
-  splitTextTimeline.restart()
-  handleTL.restart()
+burger.addEventListener('click',(e) => {
+  burger.dataset.state === 'closed' ? burger.dataset.state = "open" : burger.dataset.state = "closed"
+  nav.dataset.state === "closed" ? nav.dataset.state = "open" : nav.dataset.state = "closed"
 })
