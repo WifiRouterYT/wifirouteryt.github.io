@@ -3,23 +3,22 @@
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-  body {
-    background-color: rgb(21,21,21);
-  }
   * {
     font-family: 'Montserrat', sans-serif;
     color: white;
   }
+body {
+  background-color: rgb(13, 17, 23);
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
 </style>
-<script>
-  $(document).ready(function(){
-    $('imag').css({ 'width':'100%', 'text-align':'center' });
-    var h1 = $('imag').height();
-    var h = h1/2;
-    var w1 = $(window).height();
-    var w = w1/2;
-    var m = w - h
-    $('imag').css("margin-top",m + "px")
-  });
-</script>
-<img src="feet.png" alt="feet"></img>
+<div class="vertical-center">
+   <img src="feet.png" alt="feet"></img>
+</div>
