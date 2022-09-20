@@ -8,9 +8,9 @@
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
     </head>
-    <body>
-        <div class="area" >
-            <ul class="circles">
+    <body id="body">
+        <div class="area" id="area">
+            <ul class="circles" id="bg">
                     <li></li>
                     <li></li>
                     <li></li>
@@ -24,7 +24,15 @@
             </ul>
         </div>
         <div class="context">
-            <h1>Something great is brewing... ;)</h1>
+            <h1 id="main">Something great is brewing... ;)</h1>
         </div>
     </body>
+    <script>
+        function nomore() {
+            document.getElementById("bg").style.background = "rgb(255, 0, 0, 0.2)";
+            document.getElementById("main").style.color = "black";
+            document.getElementById("area").style.backgroundColor = "rgb(255, 0, 0, 0.7)";
+            document.getElementById("main").innerText = "Something not very great is brewing . . .  ;)";
+        }
+    </script>
 </html>
