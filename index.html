@@ -28,11 +28,16 @@
         </div>
     </body>
     <script>
+        setTimeout(function() {
+            document.getElementById("main").style.fontSize = "50px";
+        }, 10)
         function nomore() {
             document.getElementById("bg").style.background = "rgb(255, 0, 0, 0.2)";
             document.getElementById("main").style.color = "black";
             document.getElementById("area").style.backgroundColor = "rgb(255, 0, 0, 0.7)";
-            document.getElementById("main").innerText = "Something not very great is brewing . . .  ;)";
+            setTimeout(function() {
+                document.getElementById("main").innerText = "Something not very great is brewing . . .  ;)";
+            }, 250);
         }
     </script>
 </html>
