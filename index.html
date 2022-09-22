@@ -7,37 +7,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <script src="/js/script.s"></script>
     </head>
     <body id="body">
-        <div class="area" id="area">
-            <ul class="circles" id="bg">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-            </ul>
+        <div class="navbar" id="nav">
+            <a href="/" target="_blank" title="Home">
+                <img src="/resources/icon.png"></img>
+            </a>
+            <a href="/games"><p class="hover-underline-animation">Games</p></a>
+            <a href="/projects"><p class="hover-underline-animation">Projects</p></a>
+            <a href="/about"><p class="hover-underline-animation">About</p></a>
         </div>
-        <div class="context">
-            <h1 id="main">Something great is brewing... ;)</h1>
+        <div class="content">
+            <h1 class="center">🚧</h1>
+            <h1 class="center">This site is currently under</h1>
+            <h1 class="center">construction.</h1>
+            <p class="center">Check back later!</p>
         </div>
     </body>
-    <script>
-        setTimeout(function() {
-            document.getElementById("main").style.fontSize = "50px";
-        }, 10)
-        function nomore() {
-            document.getElementById("bg").style.background = "rgb(255, 0, 0, 0.2)";
-            document.getElementById("main").style.color = "black";
-            document.getElementById("area").style.backgroundColor = "rgb(255, 0, 0, 0.7)";
-            setTimeout(function() {
-                document.getElementById("main").innerText = "Something not very great is brewing . . .  ;)";
-            }, 250);
-        }
-    </script>
 </html>
