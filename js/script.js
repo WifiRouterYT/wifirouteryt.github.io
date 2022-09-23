@@ -1,10 +1,18 @@
-window.onscroll = function() {myFunction()};
-var navbar = document.getElementByClass("navbar");
-var sticky = navbar.offsetTop;
-function myFunction() {
-    if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky")
-    } else {
-      navbar.classList.remove("sticky");
-    }
+console.log("Welcome to my website!");
+window.onload = function(){
+  var startertext = document.getElementById("startertext");
+  var slopegame = document.getElementById("slopegame");
+  var game = document.getElementById("game");
+  var dinogame = document.getElementById("dinogame");
+  game.style.display = 'none';
+  slopegame.onclick = function() {
+    startertext.remove();
+    game.src = "/games/slope";
+    game.style.display = 'block';
   }
+  dinogame.onclick = function() {
+    startertext.remove();
+    game.src = "/games/dino";
+    game.style.display = 'block';
+  }
+}
