@@ -40,13 +40,13 @@ iframe {
 
 .browser {
     margin: 0;
-    height: 100%;
+    overflow-y: auto;
+    height: calc(100% - 50px);
     position: fixed;
     background-color: rgb(13, 17, 23);
     top: 0;
     width: 200px;
     max-width:250px;
-    overflow: hidden;
     display: inline;
     float: left;
     margin-top: 52px;
@@ -56,7 +56,8 @@ iframe {
 .gamelink {
     margin-top: 10px;
     margin-left: 7px;
-    height: 40px;
+    min-height: 40px;
+    height: fit-content;
     width: 95%;
     text-align: center;
     line-height: 39px;
