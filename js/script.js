@@ -1,5 +1,6 @@
 console.log("Welcome to my website!");
 window.onload = function(){
+  var closebtn = document.getElementById("close");
   var startertext = document.getElementById("startertext");
   var slopegame = document.getElementById("slopegame");
   var game = document.getElementById("game");
@@ -13,7 +14,15 @@ window.onload = function(){
   var flappybird = document.getElementById("flappybird");
   var worldshardestgame = document.getElementById("worldshardestgame");
   var eaglercraft = document.getElementById("eaglercraft");
+  var backrooms = document.getElementById("backrooms");
+  var basketballstars = document.getElementById("basketballstars");
+  var bloxors = document.getElementById("bloxors");
+  var stack = document.getElementById("stack");
+
   game.style.display = 'none';
+  closebtn.onclick = function() {
+    location.reload();
+  }
   slopegame.onclick = function() {
     startertext.remove();
     game.src = "/games/slope";
@@ -46,7 +55,7 @@ window.onload = function(){
   }
   motox3mwinter.onclick = function() {
     startertext.remove();
-    game.src = "/games/motox3m-winterhes ";
+    game.src = "/games/motox3m-winter";
     game.style.display = 'block';
   }
   minecraftclassic.onclick = function() {
@@ -67,6 +76,26 @@ window.onload = function(){
   eaglercraft.onclick = function() {
     startertext.remove();
     game.src = "/games/eaglercraft";
+    game.style.display = 'block';
+  }
+  backrooms.onclick = function() {
+    startertext.remove();
+    game.src = "/games/backrooms";
+    game.style.display = 'block';
+  }
+  basketballstars.onclick = function() {
+    startertext.remove();
+    game.src = "/games/basketball-stars";
+    game.style.display = 'block';
+  }
+  bloxors.onclick = function() {
+    startertext.remove();
+    game.src = "/games/bloxors";
+    game.style.display = 'block';
+  }
+  stack.onclick = function() {
+    startertext.remove();
+    game.src = "/games/stack";
     game.style.display = 'block';
   }
 }
