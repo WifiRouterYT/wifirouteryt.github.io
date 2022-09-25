@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Crypto Clicker by WifiRouter</title>
@@ -6,8 +7,9 @@
     </head>
     <body id="body">
         <div class="content" id="content">
-            <p>Mining: <strong>Bitcoin ₿</strong></p>
-            <p>Idle speed: <strong>0.00/s</strong></p>
+            <h2>Crypto Clicker</h1>
+            <p>Mining: <strong id="currencystring">Bitcoin</strong> <strong id="currencysymbol">₿</strong></p>
+            <p>Idle speed: <strong id="idlespeedindicator">0</strong> <strong>per sec.</strong></p>
             <div class="inline">
                 <p>Balance: </p>
             </div>
@@ -22,17 +24,98 @@
                     <button id="click" onclick="clicked()">Click (+1)</button>
                 </div>
                 <div class="inline">
-                    <button>Upgrade</button>
+                    <button onclick="document.getElementById('upgrademenu').style.display = 'block';">Upgrade</button>
                 </div>
                 <div class="inline">
-                    <button>Save</button>
+                    <button onclick="save()">Save</button>
                 </div>
                 <div class="inline">
-                    <button>Load</button>
+                    <button onclick="load()" id="loadbutton">Load</button>
                 </div>
                 <div class="inline">
                     <input type="checkbox" id="darkmode">Dark Mode</input>
                 </div>
+                <br>
+            </div>
+            <div id="savedataoutput">
+                <div class="inline">
+                    <p>Save code: <input id="savecode" readonly></input></p>
+                </div>
+                <div class="inline">
+                    <button onclick="document.getElementById('savedataoutput').style.display = 'none';">Close</button>
+                </div>
+            </div>
+            <div id="savecodeinputdiv">
+                <div class="inline">
+                    <p>Enter save code: </p>
+                </div>
+                <div class="inline">
+                    <input id="savecodeinput" class="savecodeinput"></input>
+                </div>
+                <div class="inline">
+                    <button onclick="cancelload()">Cancel</button>
+                </div>
+                <div class="inline">
+                    <button onclick="loadfrominput()">Load</button>
+                </div>
+            </div>
+            <div class="upgrademenu" id="upgrademenu">
+                <h3>Upgrades:</h3>
+                <div class="inline">
+                    <p><strong>Raspberry Pi</strong> (+1 per sec.) <strong>10 Crypto</strong></p>
+                </div>
+                <div class="inline">
+                    <button onclick="upgrade(1, 10)">Buy</button>
+                </div>
+                <br>
+                <div class="inline">
+                    <p><strong>Grandma's old laptop</strong> (+3 per sec.) <strong>30 Crypto</strong></p>
+                </div>
+                <div class="inline">
+                    <button onclick="upgrade(3, 30)">Buy</button>
+                </div>
+                <br>
+                <div class="inline">
+                    <p><strong>iPhone 6S</strong> (+5 per sec.) <strong>50 Crypto</strong></p>
+                </div>
+                <div class="inline">
+                    <button onclick="upgrade(5, 50)">Buy</button>
+                </div>
+                <br>
+                <div class="inline">
+                    <p><strong>Samsung Galaxy S22</strong> (+10 per sec.) <strong>100 Crypto</strong></p>
+                </div>
+                <div class="inline">
+                    <button onclick="upgrade(10, 100)">Buy</button>
+                </div>
+                <br>
+                <div class="inline">
+                    <p><strong>Intel NUC</strong> (+12 per sec.) <strong>120 Crypto</strong></p>
+                </div>
+                <div class="inline">
+                    <button onclick="upgrade(12, 120)">Buy</button>
+                </div>
+                <br>
+                <div class="inline">
+                    <p><strong>Lenovo ThinkPad</strong> (+25 per sec.) <strong>250 Crypto</strong></p>
+                </div>
+                <div class="inline">
+                    <button onclick="upgrade(25, 250)">Buy</button>
+                </div>
+                <br>
+                <div class="inline">
+                    <p><strong>Gamer PC</strong> (+50 per sec.) <strong>500 Crypto</strong></p>
+                </div>
+                <div class="inline">
+                    <button onclick="upgrade(50, 500)">Buy</button>
+                </div>
+                <br>
+                <p style="margin-left: 14px; margin-top: 20px"> !! prices subject to change</p>
+                <button style="margin-left: 14px; width: 150px;" onclick="document.getElementById('upgrademenu').style.display = 'none';">Close</button>
+            </div>
+
+            <div class="footer">
+                <center><p>This game is not intended to be realistic. You will not, by any means, be able to get 1 bitcoin per second without spending a couple million dollars on hardware. At that point mining will be useless anyway. <br><p style="color: red; font-weight: bold;">⚠️ All changes will be lost on refresh or exit! Make sure to keep your save code safe. ⚠️</p>CryptoClicker - Created by WifiRouter</p></center>
             </div>
         </div>
 
