@@ -3,28 +3,29 @@
     <head>
         <title>Crypto Clicker by WifiRouter</title>
         <link type="text/css" rel="stylesheet" href="style.css">
-
+        <link rel="stylesheet" href="https://unpkg.com/fixedsys-css/css/fixedsys.css">
     </head>
     <body id="body">
         <div class="content" id="content">
-            <h2>Crypto Clicker</h1>
-            <p>Mining: <strong id="currencystring">Bitcoin</strong> <strong id="currencysymbol">₿</strong></p>
-            <p>Idle speed: <strong id="idlespeedindicator">0</strong> <strong>per sec.</strong></p>
-            <div class="inline">
-                <p>Balance: </p>
+            <center><h2 style="font-size: 36px">Crypto Clicker</h1></center>
+            <div class="sideborder" style="border-color: #09a4ec;">
+                <h3>Stats:</h3>
+                <p>Mining: <strong id="currencystring" class="nomargin">Bitcoin</strong> <strong class="nomargin" id="currencysymbol">₿</strong></p>
+                <p>Idle speed: <strong id="idlespeedindicator" class="nomargin">0</strong> <strong class="nomargin">per sec.</strong></p>
+                <div class="inline">
+                    <p class="nomargin">Balance: </p>
+                </div>
+                <div class="inline">
+                    <strong><p id="balance" class="nomargin">0</p></strong>
+                </div>
+                <div class="inline" >
+                    <strong><p id="currency" class="nomargin">₿</p></strong>
+                </div>
             </div>
-            <div class="inline">
-                <strong><p id="balance">0</p></strong>
-            </div>
-            <div class="inline" >
-                <strong><p id="currency">₿</p></strong>
-            </div>
+            <br>
             <div class="button-array">
                 <div class="inline">
                     <button id="click" onclick="clicked()">Click (+1)</button>
-                </div>
-                <div class="inline">
-                    <button onclick="document.getElementById('upgrademenu').style.display = 'block';">Upgrade</button>
                 </div>
                 <div class="inline">
                     <button onclick="save()">Save</button>
@@ -59,7 +60,7 @@
                     <button onclick="loadfrominput()">Load</button>
                 </div>
             </div>
-            <div class="upgrademenu" id="upgrademenu">
+            <div class="sideborder" id="upgrademenu">
                 <h3>Upgrades:</h3>
                 <div class="inline">
                     <p><strong>Raspberry Pi</strong> (+1 per sec.) <strong>15 Crypto</strong></p>
@@ -140,6 +141,8 @@
                 <br>
                 <p style="margin-left: 14px; margin-top: 20px"> !! prices subject to change</p>
                 <button style="margin-left: 14px; width: 150px;" onclick="document.getElementById('upgrademenu').style.display = 'none';">Close</button>
+                <br>
+                <br>
             </div>
 
             <div class="footer">

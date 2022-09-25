@@ -15,7 +15,6 @@ var currency = "btc";
 //   > hide unused divs
 document.getElementById("savecodeinputdiv").style.display = 'none';
 document.getElementById("savedataoutput").style.display = 'none';
-document.getElementById("upgrademenu").style.display = 'none';
 
 // custom functions
 //   > sleep, use in an async function with 'await sleep(ms);'

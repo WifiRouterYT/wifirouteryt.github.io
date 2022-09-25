@@ -9,7 +9,20 @@ body {
 
 .content {
     margin-top: 12px;
+    margin-left: 15px;
     color: white;
+}
+
+.content * {
+    font-family: fixedsys;
+}
+
+.content * {
+    font-size: 18px;
+}
+
+.content h3 {
+    font-size: 24px;
 }
 
 p {
@@ -22,21 +35,22 @@ p {
     display: inline-block;
 }
 
-.upgrademenu {
+.sideborder {
     margin-top: 10px;
     border-left: 3px solid;
     border-color: #e5e5e5;
     height: fit-content;
     width: fit-content;
     overflow: hidden;
+    background: rgba(29, 31, 32, 0.5);
 }
 
-.upgrademenu * {
+.sideborder * {
     margin-top: 0;
     margin-left: 5px;
 }
 
-.upgrademenu p {
+.sideborder p {
     line-height: 2px;
 }
 
@@ -51,4 +65,8 @@ p {
 
 .footer * {
     line-height: 18px;
+}
+
+.nomargin {
+    margin-left: 0px;
 }
