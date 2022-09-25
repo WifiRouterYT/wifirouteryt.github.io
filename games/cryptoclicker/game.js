@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.getElementById('darkmode');
     var content = document.getElementById('content');
     var balance = document.getElementById('balance');
+    var upgrademenu = document.getElementById('upgrademenu');
 
     checkbox.checked = true;
 
@@ -123,9 +124,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.currentTarget.checked) {
             document.body.style.backgroundColor = 'rgb(1, 4, 9)';
             content.style.setProperty('color', 'white');
+            upgrademenu.style.borderColor = '#e5e5e5';
         } else {
             document.body.style.backgroundColor = 'transparent';
             content.style.setProperty('color', 'black');
+            upgrademenu.style.borderColor = 'rgb(1, 4, 9)';
         }
     })
 });
