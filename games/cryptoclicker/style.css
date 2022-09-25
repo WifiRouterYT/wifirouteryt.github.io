@@ -3,6 +3,14 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: rgb(1, 4, 9);
+}
+
+.content {
+    color: white;
+}
+
 p {
     line-height: 5px;
 }

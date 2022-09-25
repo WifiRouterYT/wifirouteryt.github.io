@@ -4,6 +4,8 @@ const content = document.getElementById('content');
 const balance = document.getElementById('balance');
 
 document.addEventListener('DOMContentLoaded', function () {
+    checkbox.checked = true;
+
     checkbox.addEventListener('change', (event) => {
         if (event.currentTarget.checked) {
             document.body.style.backgroundColor = 'rgb(1, 4, 9)';
