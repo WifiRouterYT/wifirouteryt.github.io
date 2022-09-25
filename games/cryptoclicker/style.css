@@ -1,0 +1,13 @@
+* {
+    transition: all 0.25s;
+}
+
+p {
+    line-height: 5px;
+}
+
+.inline {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
