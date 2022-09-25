@@ -18,6 +18,7 @@ window.onload = function(){
   var basketballstars = document.getElementById("basketballstars");
   var bloxors = document.getElementById("bloxors");
   var stack = document.getElementById("stack");
+  var cryptoclicker = document.getElementById("cryptoclicker");
 
   game.style.display = 'none';
   closebtn.onclick = function() {
@@ -96,6 +97,11 @@ window.onload = function(){
   stack.onclick = function() {
     startertext.remove();
     game.src = "/games/stack";
+    game.style.display = 'block';
+  }
+  cryptoclicker.onclick = function() {
+    startertext.remove();
+    game.src = "/games/cryptoclicker";
     game.style.display = 'block';
   }
 }
