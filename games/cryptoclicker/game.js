@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
             content.style.setProperty('color', 'white');
             upgrademenu.style.borderColor = '#e5e5e5';
         } else {
-            document.body.style.backgroundColor = 'transparent';
+            document.body.style.backgroundColor = 'white';
             content.style.setProperty('color', 'black');
             upgrademenu.style.borderColor = 'rgb(1, 4, 9)';
         }
