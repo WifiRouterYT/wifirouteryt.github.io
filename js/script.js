@@ -19,6 +19,7 @@ window.onload = function(){
   var bloxors = document.getElementById("bloxors");
   var stack = document.getElementById("stack");
   var cryptoclicker = document.getElementById("cryptoclicker");
+  var dogeminer = document.getElementById("dogeminer");
 
   game.style.display = 'none';
   closebtn.onclick = function() {
@@ -102,6 +103,11 @@ window.onload = function(){
   cryptoclicker.onclick = function() {
     startertext.remove();
     game.src = "/games/cryptoclicker";
+    game.style.display = 'block';
+  }
+  dogeminer.onclick = function() {
+    startertext.remove();
+    game.src = "/games/DogeMiner";
     game.style.display = 'block';
   }
 }
