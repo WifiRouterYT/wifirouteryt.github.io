@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Bloxors | 3kh0</title>
+    <title>Bloxors</title>
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <script>
       window.RufflePlayer = window.RufflePlayer || {};
@@ -30,8 +30,7 @@
   </head>
   <body style="background-color:black;">
     <center>
-      <img src="title.png" style="padding:5px;width:300px;">
-      <div id="container" style="border: #ccc 3px solid;height:600px;width:937px;"></div>
+      <div id="container" style="border: #ccc 3px solid;height:500px;width:837px;"></div>
     <script>
       window.RufflePlayer = window.RufflePlayer || {};
       window.addEventListener("load", (event) => {
@@ -39,8 +38,8 @@
           const player = ruffle.createPlayer();
           const container = document.getElementById("container");
           container.appendChild(player);
-          player.style.height = "600px";
-          player.style.width = "937px";
+          player.style.height = "500px";
+          player.style.width = "837px";
           player.load("bloxors.swf");
       });
     </script>

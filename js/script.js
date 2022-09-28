@@ -51,9 +51,10 @@ window.onload = function(){
     game.style.display = 'block';
   }
   motox3m.onclick = function() {
-    startertext.remove();
-    game.src = "/games/motox3m";
-    game.style.display = 'block';
+    alert("This game is temporarily disabled due to an issue. Sorry for the inconvinience.")
+    //startertext.remove();
+    //game.src = "/games/motox3m";
+    //game.style.display = 'block';
   }
   motox3mwinter.onclick = function() {
     startertext.remove();
