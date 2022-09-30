@@ -66,6 +66,7 @@ iframe {
     text-align: center;
     line-height: 39px;
     border-radius: 12px;
+    font-size: 22px;
 }
 
 .gamelink:hover {
