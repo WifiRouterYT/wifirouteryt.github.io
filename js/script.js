@@ -20,6 +20,16 @@ window.onload = function(){
   var stack = document.getElementById("stack");
   var cryptoclicker = document.getElementById("cryptoclicker");
   var dogeminer = document.getElementById("dogeminer");
+  var motox3mpoolparty = document.getElementById("motox3mpoolparty");
+  var minesweeper = document.getElementById("minesweeper");
+  var pacman = document.getElementById("pacman");
+  var run3 = document.getElementById("run3");
+  var ducklife1 = document.getElementById("ducklife1");
+  var ducklife2 = document.getElementById("ducklife2");
+  var ducklife3 = document.getElementById("ducklife3");
+  var ducklife4 = document.getElementById("ducklife4");
+  var doodlejump = document.getElementById("doodlejump");
+  var madalinstuntcars2 = document.getElementById("madalin-stunt-cars-2");
 
   game.style.display = 'none';
   closebtn.onclick = function() {
@@ -51,10 +61,16 @@ window.onload = function(){
     game.style.display = 'block';
   }
   motox3m.onclick = function() {
-    alert("This game is temporarily disabled due to an issue. Sorry for the inconvinience.")
-    //startertext.remove();
-    //game.src = "/games/motox3m";
-    //game.style.display = 'block';
+    //alert("This game is temporarily disabled due to an issue. Sorry for the inconvinience.")
+    startertext.remove();
+    game.src = "/games/motox3m";
+    game.style.display = 'block';
+  }
+  motox3mpoolparty.onclick = function() {
+    //alert("This game is temporarily disabled due to an issue. Sorry for the inconvinience.")
+    startertext.remove();
+    game.src = "/games/motox3m-pool-party";
+    game.style.display = 'block';
   }
   motox3mwinter.onclick = function() {
     startertext.remove();
@@ -110,5 +126,48 @@ window.onload = function(){
     startertext.remove();
     game.src = "/games/DogeMiner";
     game.style.display = 'block';
+  }
+  pacman.onclick = function() {
+    startertext.remove();
+    game.src = "/games/pacman";
+    game.style.display = 'block';
+  }
+  minesweeper.onclick = function() {
+    startertext.remove();
+    game.src = "/games/minesweeper";
+    game.style.display = 'block';
+  }
+  ducklife1.onclick = function() {
+    startertext.remove();
+    game.src = "/games/ducklife";
+    game.style.display = 'block';
+  }
+  ducklife2.onclick = function() {
+    startertext.remove();
+    game.src = "/games/ducklife2";
+    game.style.display = 'block';
+  }
+  ducklife3.onclick = function() {
+    startertext.remove();
+    game.src = "/games/ducklife3";
+    game.style.display = 'block';
+  }
+  ducklife4.onclick = function() {
+    startertext.remove();
+    game.src = "/games/ducklife4";
+    game.style.display = 'block';
+  }
+  doodlejump.onclick = function() {
+    startertext.remove();
+    game.src = "/games/doodle-jump";
+    game.style.display = 'block';
+  }
+  madalinstuntcars2.onclick = function() {
+    startertext.remove();
+    game.src = "/games/madalin-stunt-cars-2";
+    game.style.display = 'block';
+  }
+  run3.onclick = function() {
+    alert("This game is temporarily disabled due to an issue. Sorry for the inconvinience.")
   }
 }
